@@ -14,3 +14,25 @@ function sumAll(arr) {
     const sumArr = [...Array(arrSize).keys()].map(i => i + startAt);
     return reducer = sumArr.reduce((sum, curValue) => sum + curValue);
 }
+
+
+/**
+ * Array of specified size with optional start and step values. 
+ * @param {Number} size Size of the new array
+ * @param {Number} start Start value of new array
+ * @param {Number} step Step value of the new array
+ * @return {Array}      Array of numbers with specified parameters
+ * 
+ * Basic usage:
+ * range(5) return 0,1,2,3,4;
+ * range(5,1) return 1,2,3,4,5;
+ * range(5,1,2) return 1,3,5;
+ */
+
+function range(size, start=0, step=1) {
+    const arr = [];
+    for (let i=start; i<size+start; i+=step) {
+        arr.push(i);
+    }
+    return arr
+}
