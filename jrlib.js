@@ -12,7 +12,7 @@ function sumAll(arr) {
     const startAt = Math.min(...arr);
     const arrSize = Math.max(...arr)-startAt+1;
     const sumArr = [...Array(arrSize).keys()].map(i => i + startAt);
-    return reducer = sumArr.reduce((sum, curValue) => sum + curValue);
+    return sumArr.reduce((sum, curValue) => sum + curValue);
 }
 
 
