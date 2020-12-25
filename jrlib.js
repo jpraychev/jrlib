@@ -5,7 +5,7 @@
  * 
  * Basic usage:
  * sumAll([1,4]) returns 1+2+3+4;
- * sumAll([4,1]) return 1+2+3+4;
+ * sumAll([4,1]) returns 1+2+3+4;
  */
 
 function sumAll(arr) {
@@ -24,9 +24,9 @@ function sumAll(arr) {
  * @return {Array}      Array of numbers with specified parameters
  * 
  * Basic usage:
- * range(5) return 0,1,2,3,4;
- * range(5,1) return 1,2,3,4,5;
- * range(5,1,2) return 1,3,5;
+ * range(5) returns 0,1,2,3,4;
+ * range(5,1) returns 1,2,3,4,5;
+ * range(5,1,2) returns 1,3,5;
  */
 
 function range(size, start=0, step=1) {
@@ -35,4 +35,12 @@ function range(size, start=0, step=1) {
         arr.push(i);
     }
     return arr
+}
+
+
+function diffArray(arr1, arr2) {
+    let diff = arr1
+        .filter(x => !arr2.includes(x))
+        .concat(arr2.filter(x => !arr1.includes(x)));
+    return diff;
 }
